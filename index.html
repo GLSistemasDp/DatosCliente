@@ -338,23 +338,23 @@
             </div>
         </section>
 
-          <!--TABLA TRANSPORTES (doble)-->
-        <div class="tabla_info_doble">
+        <!--TABLA TRANSPORTES (principal)-->
+       <div class="tabla_info_doble">
             <section id="tabla_info">
-                <div class="section">
+               <div class="section">
                     <div class="section-title">4. Datos de trasporte y entrega</div>
-                    <table>
+                    <!--  <table>
                         <tr>
                             <th>Transportista</th>
-                            <td>nombre Transportista <!--GRTTRA.GRTTRA_DESCRP--></td>
+                            <td>nombre Transportista </td>
                         </tr>
                         <tr>
-                            <th>Direc. de entrega</th>
-                            <td>Defensa 2391, ALDO BONZI<!--VTMCLH.VTMCLH_DIRENT + GRTPAH_1.GRTPAH_DESCRP + (VTMCLH.VTMCLH_CODENT)--></td>
+                            <th>Direc. de entrega</th>  
+                            <td>Defensa 2391, ALDO BONZI</td>
                         </tr>
                         <tr>
                             <th>Jurisdicción</th>
-                            <td>Provincia de Buenos Aires <!--GRTJUR_1.GRTJUR_DESCRP--></td>
+                            <td>Provincia de Buenos Aires </td>
                         </tr>
                         <tr>
                             <th>Email de fac</th>
@@ -364,44 +364,45 @@
                             <th>Facturación</th>
                             <td>Anual</td>
                         </tr>
-                    </table>
-                </div>
+                    </table>-->
+                    <section id="tabla_direcciones">
+                        <div class="section">
+                            <!--<div class="section-title-secondary">Direcciones y envios</div>-->
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Descripción</th>
+                                        <th>Dirección</th>
+                                        <th>País</th>
+                                        <th>Jurisdicción</th>
+                                        <th>Código Postal (CP)</th>
+                                        <th>Transportista</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Entrega secundaria 1</td> <!--DESCRIPCION-->
+                                        <td>Aldo Bonzi, Buenos Aires</td><!--VTMCLH.VTMCLH_DIRENT-->
+                                        <td>Argentina</td><!--GRTPAH_1.GRTPAH_DESCRP-->
+                                        <td>provincia</td><!--GRTJUR_1.GRTJUR_DESCRP-->
+                                        <td>1770</td><!--VTMCLH.VTMCLH_CODENT-->
+                                        <td>Transportes XYZ</td> <!--GRTTRA.GRTTRA_DESCRP-->
+                                    </tr>
+                                    <tr>
+                                        <td>Entrega secundaria 2</td><!--DESCRIPCION-->
+                                        <td>Av. Libertador 123, CABA</td><!--VTMCLH.VTMCLH_DIRENT-->
+                                        <td>Argentina</td><!--GRTPAH_1.GRTPAH_DESCRP-->
+                                        <td>CABA</td><!--GRTJUR_1.GRTJUR_DESCRP-->
+                                        <td>1001</td><!--VTMCLH.VTMCLH_CODENT-->
+                                        <td>Transportes ABC</td><!--GRTTRA.GRTTRA_DESCRP-->
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+                </div> 
                 <!-- TABLA DIRECCIONES -->
-                <section id="tabla_direcciones">
-                    <div class="section">
-                        <div class="section-title-secondary">Direcciones y envios</div>
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>Descripción</th>
-                                    <th>Dirección</th>
-                                    <th>País</th>
-                                    <th>Jurisdicción</th>
-                                    <th>Código Postal (CP)</th>
-                                    <th>Transportista</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Entrega secundaria 1</td>
-                                    <td>Aldo Bonzi, Buenos Aires</td>
-                                    <td>Argentina</td>
-                                    <td>provincia</td>
-                                    <td>1770</td>
-                                    <td>Transportes XYZ</td>
-                                </tr>
-                                <tr>
-                                    <td>Entrega secundaria 2</td>
-                                    <td>Av. Libertador 123, CABA</td>
-                                    <td>Argentina</td>
-                                    <td>CABA</td>
-                                    <td>1001</td>
-                                    <td>Transportes ABC</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </section>
+                
             </section>
             <!--<section id="tabla_info">
                 <div class="section">
@@ -448,7 +449,7 @@
                 <p>servicioalcliente@depascale.com.ar</p>
             </div>
             <div class="footer-item">
-                <img src="/assets/Phone.png    " alt="telefono" width="30px">
+                <img src="/assets/Phone.png" alt="telefono" width="30px">
                 <p>+54 9 11 4442-3773</p>
             </div>
         </div>
