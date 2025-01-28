@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datos del Cliente</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: "Inter", sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100vw;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #f9f9f9;
+        }
+
+        .container {
+            background: #ffffff;
+            border: 1px solid #ddd;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 90%;
+            max-width: 1200px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        header, footer {
+            width: 100%;
+            background: #003366;
+            color: white;
+            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        header img {
+            max-height: 80px;
+        }
+
+        .fecha-act {
+            text-align: right;
+        }
+
+        .info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 80%;
+            margin: 20px auto;
+        }
+
+        .info_actu {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            align-items: center;
+        }
+
+        h2{
+            font-weight: 900;
+            font-size: 30px;
+            color: #003366;
+            text-align: center;
+        }
+
+        #Importante {
+            background-color: #8CBA37;
+            color: #ffffff;
+            height: 50px;
+            width: 150px;
+            text-align: center;
+            line-height: 50px;
+            font-weight: 400;
+            font-size: 20px;
+            border-radius: 5px;
+        }
+
+        #Importante p{
+            font-size: 20px;
+        }
+
+        .container-tablas {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        #tabla_info {
+            width: 100%;
+            margin: auto;
+            align-content: center;
+        }
+
+        .section-title{
+            display: flex;
+            width: 100%;
+            height: 50px;
+            align-items: center;
+            padding-left: 15px;
+            color: white;
+            font-weight: 700;
+            background-color: #003366; 
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        table th, table td {
+            border: 1px solid #003366;
+            padding: 10px;
+            text-align: left;
+            font-size: 16px;
+        }
+
+        table th {
+            background-color: #DCE0E9;
+            color: #003366;
+            font-weight: bold;
+        }
+
+        table td {
+            font-weight: 400;
+        }
+
+        table tr th:first-child, table tr td:first-child {
+            width: 30%;
+        }
+
+        .section-title-secondary{
+            background-color: #8CBA37;
+            height: 30px;
+            color: white;
+            align-content: center;
+            padding-left: 15px;
+            font-weight: 400;
+            border: 1px solid #68990d;
+        }
+
+        footer {
+            background-color: #1b3c75;
+            color: white;
+            padding: 20px;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 25px;
+        }
+
+        .footer-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+
+        .tabla_info_doble {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        @media (max-width: 768px) {
+            .info {
+                flex-direction: column;
+                align-items: flex-start;
+                width: 100%;
+            }
+
+            .footer-container {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+            }
+
+            .tabla_info_doble {
+                flex-direction: column;
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <img src="/DATOSCLIENTE/assets/Logo De Pascale WEB 1.png" width="100px" alt="Logo">
+        <div class="fecha-act">
+            <p>Última actualización</p>
+            <span>10/10/2025</span>
+        </div>
+    </header>
+
+    <section class="info">
+        <div>
+            <h2>DATOS <br> DEL CLIENTE</h2>
+        </div>
+        <div class="info_actu">
+            <span id="Importante">IMPORTANTE</span>
+            <p>Si necesitas hacer alguna modificación o adicionar algún dato, <br> comunicate a nuestro whatsapp</p>
+        </div>
+    </section>
+
+    <div class="container-tablas">
+        <!--TABLA DATOS GRALES-->
+        <section id="tabla_info">
+            <div class="section">
+                <div class="section-title">1. Información General</div>
+                <table>
+                    <tr>
+                        <th>Nombre de fantasía</th>
+                        <td>Ferretería Pepito <!--VTMCLH.USR_VTMCLH_NOMFAN--></td> <!--CAMBIAR POR EL Num DE LA CUENTA-->
+                    </tr>   
+                    <tr>
+                        <th>Número de cuenta</th>
+                        <td>4565205874 <!--VTMCLH.VTMCLH_NROCTA--></td> <!--CAMBIAR POR EL Num DE LA CUENTA-->
+                    </tr>
+                    <tr>
+                        <th>Razón social</th>
+                        <td>Ferreteria pepito sa <!--VTMCLH.VTMCLH_NOMBRE--></td> <!--CAMBIAR POR LA RAZON SOCIAL-->
+                    </tr>
+                    <tr>
+                        <th>Sub Cuenta</th>
+                        <td> 45646543218 <!--VTMCLH.VTMCLH_NROSUB--></td> <!--CAMBIAR POR LA SUBCUENTA-->
+                    </tr>
+                </table>
+            </div>
+        </section>
+
+        <!--TABLA DATOS FACTURACION-->
+        <section id="tabla_info">
+            <div class="section">
+                <div class="section-title">2. Facturación</div>
+                <table>
+                    <tr>
+                        <th>Dirección de facturación</th>
+                        <td>defensa 2391, Aldo Bonzi, Buenos Aires.<!--VTMCLH.VTMCLH_DIRECC + VTMCLH.VTMCLH_NUMERO--></td> <!--CAMBIAR POR LA DIRECCION DE FACTURACION-->
+                    </tr>
+                    <tr>
+                        <th>Email de facturación</th>
+                        <td>email@gmail.com<!--VTMCLH.VTMCLH_DIREML--></td> <!--CAMBIAR POR LA DIRECCION DE FACTURACION-->
+                    </tr>  
+                    <tr>
+                        <th>Piso y departamento</th>
+                        <td>piso 2, dpto 12<!--VTMCLH.VTMCLH_DEPTOS + VTMCLH.VTMCLH_DPPISO--></td> <!--CAMBIAR POR LOS DEPARTAMENTOS DE FACTURACION-->
+                    </tr>
+                    <tr>
+                        <th>País de facturación</th>
+                        <td>Argentina<!--GRTPAH.GRTPAH_DESCRP--></td> <!--CAMBIAR POR EL PAIS DE FACTURACION-->
+                    </tr>
+                    <tr>
+                        <th>C. Postal</th>
+                        <td>1770<!--VTMCLH.VTMCLH_CODPOS--></td> <!--CAMBIAR POR EL CODIGO POSTAL-->
+                    </tr>
+                    <tr>
+                        <th>Teléfono de facturación</th>
+                        <td>+54 1145787621 <!--VTMCLH.VTMCLH_TELEFN--></td> <!--CAMBIAR POR TELEFONO DE FACTURACION-->
+                    </tr>
+                </table>
+            </div>
+        </section>
+
+        <!--TABLA INFORMACIÓN IMPOSITIVA-->
+        <section id="tabla_info">
+            <div class="section">
+                <div class="section-title">3. Información Impositiva</div>
+                <table>
+                    <tr>
+                        <th>Situación impositiva</th>
+                        <td>Responsable inscripto <!--GRTIVA.GRTIVA_DESCRP--></td> <!--CAMBIAR POR DESCRIPCION DE LA SITUACION IMPOSITIVA-->  
+                    </tr>
+                    <tr>
+                        <th>Tipo de documento</th>
+                        <td>CUIL <!--GRTDCH.GRTDCH_DESCRP--></td> <!--CAMBIAR POR DESCRIPCION DE TIPO DE DOCUMENTO-->
+                    </tr>
+                    <tr>
+                        <th>Nro. de documento</th>
+                        <td>23-23.547.860-9 <!--VTMCLH.VTMCLH_NRODOC--></td> <!--CAMBIAR POR NUMERO DE DOCUMENTO-->
+                    </tr>
+                    <tr>
+                        <th>Vendedor</th>
+                        <td>Pepe <!--VTTVND.VTTVND_DESCRP--></td> <!--CAMBIAR POR DESCRIPCION VENDEDOR-->
+                    </tr>
+                    <tr>
+                        <th>Juridicción</th>
+                        <td> 231321321 <!--GRTJUR.GRTJUR_DESCRP--> </td> <!--CAMBIAR POR DESCRIPCION JURIDICCION-->
+                    </tr>
+                    <tr>
+                        <th>Zona</th>
+                        <td>CABA <!--GRTZON.GRTZON_DESCRP--></td> <!--CAMBIAR POR DESCRIPCION ZONA-->
+                    </tr>
+                    <tr>
+                        <th>Actividad</th>
+                        <td>mercado <!--GRTACT.GRTACT_DESCRP--> </td> <!--CAMBIAR POR DESCRIPCION ACTIVIDAD-->
+                    </tr>
+                    <tr>
+                        <th>Categoría</th>
+                        <td>Anual <!--GRTCAT.GRTCAT_DESCRP--> </td> <!--CAMBIAR POR DESCRIPCION CATEGORÍA-->
+                    </tr>
+                    <tr>
+                        <th>Condición de pago</th>
+                        <td>Mensual <!--VTTCPH.VTTCPH_DESCRP--></td> <!--CAMBIAR POR DESCRIPCION PAGO-->
+                    </tr>
+                    <tr>
+                        <th>Límite de crédito</th>
+                        <td>1.200.000 <!--VTTLCR.VTTLCR_DESCRP--></td> <!--CAMBIAR POR DESCRIPCION LIMITE DE CRÉDITO-->
+                    </tr>
+                </table>
+            </div>
+        </section>
+
+          <!--TABLA TRANSPORTES (doble)-->
+        <div class="tabla_info_doble">
+            <section id="tabla_info">
+                <div class="section">
+                    <div class="section-title">4. Datos de trasporte y entrega</div>
+                    <table>
+                        <tr>
+                            <th>Transportista</th>
+                            <td>nombre Transportista <!--GRTTRA.GRTTRA_DESCRP--></td>
+                        </tr>
+                        <tr>
+                            <th>Direc. de entrega</th>
+                            <td>Defensa 2391, ALDO BONZI<!--VTMCLH.VTMCLH_DIRENT + GRTPAH_1.GRTPAH_DESCRP + (VTMCLH.VTMCLH_CODENT)--></td>
+                        </tr>
+                        <tr>
+                            <th>Jurisdicción</th>
+                            <td>Provincia de Buenos Aires <!--GRTJUR_1.GRTJUR_DESCRP--></td>
+                        </tr>
+                        <tr>
+                            <th>Email de fac</th>
+                            <td>dp@industria.com.ar</td>
+                        </tr>
+                        <tr>
+                            <th>Facturación</th>
+                            <td>Anual</td>
+                        </tr>
+                    </table>
+                </div>
+                <!-- TABLA DIRECCIONES -->
+                <section id="tabla_direcciones">
+                    <div class="section">
+                        <div class="section-title-secondary">Direcciones y envios</div>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Descripción</th>
+                                    <th>Dirección</th>
+                                    <th>País</th>
+                                    <th>Jurisdicción</th>
+                                    <th>Código Postal (CP)</th>
+                                    <th>Transportista</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Entrega secundaria 1</td>
+                                    <td>Aldo Bonzi, Buenos Aires</td>
+                                    <td>Argentina</td>
+                                    <td>provincia</td>
+                                    <td>1770</td>
+                                    <td>Transportes XYZ</td>
+                                </tr>
+                                <tr>
+                                    <td>Entrega secundaria 2</td>
+                                    <td>Av. Libertador 123, CABA</td>
+                                    <td>Argentina</td>
+                                    <td>CABA</td>
+                                    <td>1001</td>
+                                    <td>Transportes ABC</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+            </section>
+            <!--<section id="tabla_info">
+                <div class="section">
+                    <div class="section-title">1. Información General</div>
+                    <table>
+                        <tr>
+                            <th>Rubro</th>
+                            <td>Ferretería</td>
+                        </tr>
+                        <tr>
+                            <th>Antigüedad</th>
+                            <td>25 años</td>
+                        </tr>
+                        <tr>
+                            <th>Puntos de venta</th>
+                            <td>Aldo Bonzi, Buenos Aires</td>
+                        </tr>
+                        <tr>
+                            <th>Cantidad de empleados</th>
+                            <td>70 empleados</td>
+                        </tr>
+                        <tr>
+                            <th>Facturación</th>
+                            <td>Anual</td>
+                        </tr>
+                    </table>
+                </div>
+            </section> -->
+        </div>
+    </div>
+
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-item">
+                <img src="/DATOSCLIENTE/assets/Location.png" alt="ubicacion" width="30px">
+                <div>
+                    <p>Defensa 2391</p>
+                    <p>Aldo Bonzi, Buenos Aires</p>
+                </div>
+            </div>
+            <div class="footer-item">
+                <img src="/DATOSCLIENTE/assets/Mail.png" alt="mail" width="30px">
+                <p>servicioalcliente@depascale.com.ar</p>
+            </div>
+            <div class="footer-item">
+                <img src="/DATOSCLIENTE/assets/Phone.png    " alt="telefono" width="30px">
+                <p>+54 9 11 4442-3773</p>
+            </div>
+        </div>
+    </footer>
+</div>
+
+</body>
+</html>
